@@ -1,8 +1,7 @@
 # meteo
-LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) parsers, ar dokcer stdout izvadi un html izveidi
-<p>
- Startējas divos veidos:
+<p>LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) parsers, ar dokcer stdout izvadi un html izveidi.
 </p>
+</br>Startējas divos veidos:
 </br>1.
 </br>nano scraper.py
 </br>docker build -t weather-scraper .
