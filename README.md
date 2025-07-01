@@ -3,15 +3,12 @@ LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) pa
 <p>
  Startējas divos veidos:
 </p>
-</br>
-1.
-nano scraper.py
-docker build -t weather-scraper .
-docker run --rm weather-scraper
-
-2.
-docker-compose up --build
-
-vēlāk var:
-docker-compose up -d
-docker-compose logs -t -f
+</br>1.
+</br>nano scraper.py
+</br>docker build -t weather-scraper .
+</br>docker run --rm weather-scraper
+</br>2.
+</br>docker-compose up --build
+</br>vēlāk var:
+</br>docker-compose up -d
+</br>docker-compose logs -t -f
