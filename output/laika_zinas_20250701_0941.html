@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laika ziņas - Saldus</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f9ff;
+            color: #333;
+        }
+        .weather-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .weather-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+        }
+        .weather-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .weather-item {
+            display: flex;
+            align-items: center;
+        }
+        .weather-item span {
+            margin-left: 10px;
+        }
+        h1 {
+            color: #2c5282;
+            margin: 0;
+        }
+        .period {
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="header">
+            <div class="weather-icon">☀️</div>
+            <div>
+                <h1>Laika ziņas - Saldus</h1>
+                <div class="period">No plkst. 09:00 1. jūl līdz 21:00 1. jūl Saldus</div>
+            </div>
+        </div>
+        
+        <div class="weather-info">
+            <div class="weather-item">
+                <strong>Temperatūra:</strong> <span>23°</span>
+            </div>
+            <div class="weather-item">
+                <strong>Apstākļi:</strong> <span>Skaidrs laiks.</span>
+            </div>
+            <div class="weather-item">
+                <strong>Nokrišņi:</strong> <span>0mm</span>
+            </div>
+            <div class="weather-item">
+                <strong>Vējš:</strong> <span>5m/s ZR</span>
+            </div>
+            <div class="weather-item">
+                <strong>Vēja brāzmas:</strong> <span>11m/s</span>
+            </div>
+            <div class="weather-item">
+                <strong>Mitrums:</strong> <span>68%</span>
+            </div>
+            <div class="weather-item">
+                <strong>UV indekss:</strong> <span>7</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Atjaunināts: 2025-07-01 09:41:01 | Dati: LVGMC
+        </div>
+    </div>
+</body>
+</html>
+    
