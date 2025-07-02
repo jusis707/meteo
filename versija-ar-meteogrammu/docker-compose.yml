@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  weather-scraper:
+    image: weather-scraper
+    build: .
+    container_name: lv-weather
+    restart: unless-stopped
+    networks:
+      - weather-net
+    volumes:
+      - ./output:/app/output
+networks:
+  weather-net:
+    driver: bridge
