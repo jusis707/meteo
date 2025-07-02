@@ -17,3 +17,9 @@
 </br>docker-compose logs -t -f
 </br>skatamies output
 </br>papildus, izveidojas 'html' datne, mapē: ./output
+</br>
+</br>
+</br>Mapē 'versija-ar-meteogrammu', papildus, pievienota meteogrammas, pievienošana.
+</br>
+</br>
+</br>
