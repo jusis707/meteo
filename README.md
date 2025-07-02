@@ -4,7 +4,7 @@
 </br>Uzstādīšana:
 </br>git clone https://github.com/jusis707/meteo
 </br> cd meteo
-</br>Pēc izveles, zemāk, divi veidi:
+</br>Pēc izvēles, zemāk, divi veidi:
 </br>1.
 </br>docker build -t weather-scraper .
 </br>docker run --rm weather-scraper
