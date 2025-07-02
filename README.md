@@ -21,7 +21,7 @@
 </br>Mapē 'versija-ar-meteogrammu', papildus, pievienota funkcionalitāte, ar meteogrammas pievienošanu (attēls), uz esošo nedēļu, ar papildus kodu 'html' failā un attēlu mapē ./output.
 </br>
 </br>p.s.
-</br>versijā, ar meteoframmu, papildus komanda, ērtībai:
+</br>versijā, ar meteogrammu, papildus komanda, ērtībai:
 </br>`docker-compose logs -t -f | sed -n '/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/,/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/ { //b; p }'`
 </br>
 </br>
