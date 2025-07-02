@@ -192,10 +192,8 @@ def generate_html_report(weather_data):
 </html>
     """
     
-    # Create output directory if it doesn't exist
     os.makedirs('output', exist_ok=True)
     
-    # Save HTML file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     filename = f"output/laika_zinas_{timestamp}.html"
     with open(filename, 'w', encoding='utf-8') as f:
@@ -224,7 +222,6 @@ if __name__ == "__main__":
         print(f"Mitrums: {weather.get('humidity', 'N/A')}%")
         print(f"UV indekss: {weather.get('uv_index', 'N/A')}")
         
-        # Generate HTML report
         html_file = generate_html_report(weather)
         print(f"\nHTML report saved to: {html_file}")
     else:
