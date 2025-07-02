@@ -211,7 +211,7 @@ if __name__ == "__main__":
         time.sleep(5)
     
     if weather:
-        print("\n=== LAIKA APTĀKĻU KOPSAVILKUMS ===")
+        print("\n=== LAIKA APSTĀKĻU KOPSAVILKUMS ===")
         print(f"Periods: {weather.get('period', 'N/A')}")
         print(f"Temperatūra: {weather.get('temperature', 'N/A')}")
 #        print(f"Apstākļi: {weather.get('conditions', 'N/A')}")
