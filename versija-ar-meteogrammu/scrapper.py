@@ -7,7 +7,7 @@ def get_weather_data(page):
     try:
         try:
             page.click('text=Kopsavilkums', timeout=10000)
-            time.sleep(2)  # Wait for tab switch
+            time.sleep(2)
         except:
             print("Kopsavilkums tab already active or not found")
             pass
@@ -77,7 +77,7 @@ def get_meteogramma_screenshot(page):
                 page.click(selector, timeout=15000)
                 print(f"Clicked Meteogramma tab using selector: {selector}")
                 tab_found = True
-                time.sleep(3)  # Wait for tab switch
+                time.sleep(3)
                 break
             except Exception as e:
                 print(f"Failed to click with selector {selector}: {str(e)}")
@@ -87,14 +87,14 @@ def get_meteogramma_screenshot(page):
             print("Could not find Meteogramma tab")
             return None
         
-        time.sleep(5)  # Important - give time for graph to render
+        time.sleep(5)
         
         content_selectors = [
             'div.meteogramma-container',
             'div.meteogram-container',
             'div.chart-container',
             'div.tab-content.active',
-            'canvas',  # Directly target the canvas element
+            'canvas',
             'div.plot-container'
         ]
         
@@ -262,10 +262,8 @@ def generate_html_report(weather_data):
 </html>
     """
     
-    # Create output directory if it doesn't exist
     os.makedirs('output', exist_ok=True)
     
-    # Save HTML file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     filename = f"output/laika_zinas_{timestamp}.html"
     with open(filename, 'w', encoding='utf-8') as f:
@@ -286,12 +284,10 @@ def main():
         page.set_default_timeout(60000)
         
         try:
-            # Navigate to page
             print("Loading page...")
             page.goto(url, wait_until="networkidle")
-            time.sleep(3)  # Wait for initial load
+            time.sleep(3)
             
-            # Get weather data from Kopsavilkums
             print("\n=== Getting weather summary ===")
             weather_data = None
             for attempt in range(3):
@@ -304,7 +300,6 @@ def main():
                 print("Failed to get weather data")
                 return
             
-            # Print weather summary to console
             print("\n=== LAIKA APTĀKĻU KOPSAVILKUMS ===")
             print(f"Periods: {weather_data.get('period', 'N/A')}")
             print(f"Temperatūra: {weather_data.get('temperature', 'N/A')}")
@@ -315,7 +310,6 @@ def main():
             print(f"Mitrums: {weather_data.get('humidity', 'N/A')}%")
             print(f"UV indekss: {weather_data.get('uv_index', 'N/A')}")
             
-            # Get Meteogramma screenshot
             print("\n=== Getting Meteogramma ===")
             meteogram_path = None
             for attempt in range(3):
@@ -325,7 +319,6 @@ def main():
                     break
                 time.sleep(5)
             
-            # Generate HTML report
             html_file = generate_html_report(weather_data)
             print(f"\nHTML report saved to: {html_file}")
             
