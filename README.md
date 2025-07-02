@@ -1,5 +1,5 @@
 # meteo
-</br>LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) datu parsers, ar docker konteinera stdout izvadi un html datnes izveidi ./output mapē.
+LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) datu parsers, ar docker konteinera stdout izvadi un html datnes izveidi ./output mapē.
 </br>(modificējama, esošās, Saldus, atrašanās vieta, pēc nosaukuma - https://videscentrs.lvgmc.lv/karte)  
 </br>Uzstādīšana:
 </br>`git clone https://github.com/jusis707/meteo`
