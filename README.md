@@ -18,7 +18,7 @@
 </br>skatamies output
 </br>papildus, izveidojas 'html' datne, mapē: ./output
 </br>
-</br>Mapē 'versija-ar-meteogrammu', papildus, pievienota meteogrammas attēls.
+</br>Mapē 'versija-ar-meteogrammu', papildus, pievienota funkcionalitāte, ar meteogrammas pievienošanu (attēls), uz esošo nedēļu, ar papildus kodu 'html' failā un attēlu mapē ./output.
 </br>
 </br>
 </br>
