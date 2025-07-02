@@ -261,7 +261,7 @@ def generate_html_report(weather_data):
         
         <div class="meteogram-link">
             <p>Meteogramma pieejama zemāk:</p>
-            <img src="index.png" alt="Meteogramma" style="max-width: 100%;">
+            <img src="{weather_data.get('meteogram_path', '')}" alt="Meteogramma" style="max-width: 100%;">
         </div>
         
         <div class="footer">
