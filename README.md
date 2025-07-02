@@ -22,7 +22,7 @@ LATVIJAS VIDES, ĢEOLOĢIJAS UN METEOROLOĢIJAS CENTRS (videscentrs.lvgmc.lv) da
 </br>
 </br>p.s.
 </br>versijā, ar meteogrammu, papildus komanda, ērtībai:
-</br>`docker-compose logs -t -f | sed -n '/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/,/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/ { //b; p }'`
+</br>`docker-compose logs -t -f lv-weather | sed -n '/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/,/^lv-weather[[:space:]]\+|[[:space:]][[:digit:]]\{4\}-[[:digit:]]\{2\}-[[:digit:]]\{2\}T[[:digit:]]\{2\}:[[:digit:]]\{2\}:[[:digit:]]\{2\}\.[[:digit:]]\{9\}Z[[:space:]]=== Getting/ { //b; p }'`
 </br>
 </br>
 
