@@ -301,7 +301,7 @@ def main():
                 print("Failed to get weather data")
                 return
             
-            print("\n=== LAIKA APTĀKĻU KOPSAVILKUMS ===")
+            print("\n=== LAIKA APSTĀKĻU KOPSAVILKUMS ===")
             print(f"Periods: {weather_data.get('period', 'N/A')}")
             print(f"Temperatūra: {weather_data.get('temperature', 'N/A')}")
 #            print(f"Apstākļi: {weather_data.get('conditions', 'N/A')}")
