@@ -239,9 +239,9 @@ def generate_html_report(weather_data):
             <div class="weather-item">
                 <strong>Temperatūra:</strong> <span>{weather_data.get('temperature', 'N/A')}</span>
             </div>
-#            <div class="weather-item">
-#                <strong>Apstākļi:</strong> <span>{weather_data.get('conditions', 'N/A')}</span>
-#            </div>
+<!--            <div class="weather-item">
+                <strong>Apstākļi:</strong> <span>{weather_data.get('conditions', 'N/A')}</span>
+            </div> -->
             <div class="weather-item">
                 <strong>Nokrišņi:</strong> <span>{weather_data.get('precipitation', 'N/A')}mm</span>
             </div>
