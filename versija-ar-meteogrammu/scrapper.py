@@ -5,7 +5,6 @@ from datetime import datetime
 
 def get_weather_data(page):
     try:
-        # Switch to Kopsavilkums tab
         try:
             page.click('text=Kopsavilkums', timeout=10000)
             time.sleep(2)  # Wait for tab switch
@@ -13,7 +12,6 @@ def get_weather_data(page):
             print("Kopsavilkums tab already active or not found")
             pass
         
-        # Get weather summary data
         selectors = [
             'div.tab-pane.active >> text=No plkst.',
             'div.weather-summary >> text=No plkst.',
@@ -66,7 +64,6 @@ def get_weather_data(page):
 
 def get_meteogramma_screenshot(page):
     try:
-        # Switch to Meteogramma tab
         tab_selectors = [
             'text=Meteogramma',
             'div.tab-link:has-text("Meteogramma")',
@@ -90,10 +87,8 @@ def get_meteogramma_screenshot(page):
             print("Could not find Meteogramma tab")
             return None
         
-        # Wait for Meteogramma content to load
         time.sleep(5)  # Important - give time for graph to render
         
-        # Try to find the Meteogramma content
         content_selectors = [
             'div.meteogramma-container',
             'div.meteogram-container',
@@ -108,12 +103,10 @@ def get_meteogramma_screenshot(page):
                 content = page.locator(selector)
                 content.wait_for(state="visible", timeout=20000)
                 
-                # Get bounding box with padding
                 box = content.bounding_box()
                 if not box:
                     continue
                 
-                # Add padding to the screenshot area
                 padding = 20
                 clip_area = {
                     'x': max(0, box['x'] - padding),
@@ -122,12 +115,10 @@ def get_meteogramma_screenshot(page):
                     'height': box['height'] + (2 * padding)
                 }
                 
-                # Create output directory
                 os.makedirs('output', exist_ok=True)
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 screenshot_path = f"output/meteogramma_{timestamp}.png"
                 
-                # Take screenshot
                 page.screenshot(
                     path=screenshot_path,
                     clip=clip_area,
@@ -148,7 +139,6 @@ def get_meteogramma_screenshot(page):
         return None
 
 def generate_html_report(weather_data):
-    # Determine weather icon based on conditions
     conditions = weather_data.get('conditions', '').lower()
     if 'lietus' in conditions:
         icon = '🌧️'
