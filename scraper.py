@@ -163,9 +163,9 @@ def generate_html_report(weather_data):
             <div class="weather-item">
                 <strong>Temperatūra:</strong> <span>{weather_data.get('temperature', 'N/A')}</span>
             </div>
-            <div class="weather-item">
+<!--            <div class="weather-item">
                 <strong>Apstākļi:</strong> <span>{weather_data.get('conditions', 'N/A')}</span>
-            </div>
+            </div> -->
             <div class="weather-item">
                 <strong>Nokrišņi:</strong> <span>{weather_data.get('precipitation', 'N/A')}mm</span>
             </div>
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         print("\n=== LAIKA APTĀKĻU KOPSAVILKUMS ===")
         print(f"Periods: {weather.get('period', 'N/A')}")
         print(f"Temperatūra: {weather.get('temperature', 'N/A')}")
-        print(f"Apstākļi: {weather.get('conditions', 'N/A')}")
+#        print(f"Apstākļi: {weather.get('conditions', 'N/A')}")
         print(f"Nokrišņi: {weather.get('precipitation', 'N/A')}mm")
         print(f"Vējš: {weather.get('wind_speed', 'N/A')}m/s {weather.get('wind_direction', '')}")
         print(f"Vēja brāzmas: {weather.get('wind_gusts', 'N/A')}m/s")
