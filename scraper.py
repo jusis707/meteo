@@ -77,7 +77,6 @@ def get_weather_data():
             browser.close()
 
 def generate_html_report(weather_data):
-    # Determine weather icon based on conditions
     conditions = weather_data.get('conditions', '').lower()
     if 'lietus' in conditions:
         icon = '🌧️'
