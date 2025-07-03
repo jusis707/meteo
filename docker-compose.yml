@@ -7,8 +7,7 @@ services:
       - ./output:/app/output:z
     networks:
       - weather-net
-    # Add the restart policy here
-    restart: unless-stopped # Or 'always', depending on your needs
+    restart: unless-stopped
 
 networks:
   weather-net:
