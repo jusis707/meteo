@@ -4,10 +4,10 @@ services:
   lv-weather:
     build: .
     volumes:
-      - ./output:/app/output:z 
+      - ./output:/app/output:z
     networks:
       - weather-net
-    restart: unless-stopped      
+    restart: unless-stopped
 
 networks:
   weather-net:
